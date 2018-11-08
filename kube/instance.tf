@@ -5,8 +5,8 @@ resource "google_container_cluster" "primary" {
 
 
   master_auth {
-    username = REPLACE_USERNAME
-    password = REPLACE_PASSWORD
+    username = "${var.user}"
+    password = "${var.passcode}"
   }
 
   node_config {
