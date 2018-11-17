@@ -1,7 +1,9 @@
+data "google_client_config" "current" {}
+
 resource "google_container_cluster" "primary" {
   name               = "bhanu-chandra"
-  zone               = "asia-south1-a"
-  initial_node_count = 2
+  zone               = "asia-east1"
+  initial_node_count = 1
 
 
   master_auth {
@@ -18,13 +20,13 @@ resource "google_container_cluster" "primary" {
     ]
 
     labels {
-      foo = "bar"
+      foo = "jupyter"
     }
 
-    tags = ["foo", "bar"]
+    tags = ["jupyter", "hub","python"]
   }
+  enable_legacy_abac = true
 }
-
 # The following outputs allow authentication and connectivity to the GKE Cluster.
 output "client_certificate" {
   value = "${google_container_cluster.primary.master_auth.0.client_certificate}"
