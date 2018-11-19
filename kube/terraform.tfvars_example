@@ -1,0 +1,4 @@
+helm_version = "v2.11.0"
+acme_email = "[add your emailid]"
+user = "[add the user details for kubernetes]"
+passcode = "[add passcode for kubernetes]"
