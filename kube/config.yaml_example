@@ -1,2 +1,8 @@
 proxy:
   secretToken: "Secret Token"
+auth:
+  whitelist:
+    users:
+      - "user1"
+      - "user2"
+      - "user3"

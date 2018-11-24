@@ -3,6 +3,7 @@ data "google_client_config" "current" {}
 resource "google_container_cluster" "primary" {
   name               = "bhanu-chandra"
   zone               = "asia-east1"
+  project	      = ""
   initial_node_count = 1
 
 
