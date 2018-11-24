@@ -1,2 +1,6 @@
 #ignoreing the config files, refer the example
 config.yaml
+get_helm.sh
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
