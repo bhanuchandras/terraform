@@ -5,7 +5,7 @@ NAMESPACE=jhub
 
 helm upgrade --install $RELEASE jupyterhub/jupyterhub \
   --namespace $NAMESPACE  \
-  --version 0.7.0 \
+  --version 0.9.0 \
   --values config.yaml
 
 kubectl config set-context $(kubectl config current-context) --namespace ${NAMESPACE:-jhub}
