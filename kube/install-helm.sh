@@ -1,4 +1,4 @@
-gcloud beta container clusters get-credentials bhanu-chandra --region asia-east1 --project cloudjupyter-bhanu
+#gcloud beta container clusters get-credentials bhanu-chandra --region asia-east1 --project cloudjupyter-bhanu
 kubectl get all
 EMAIL=bhanuchandra.sabbavarapu@gmail.com
 
