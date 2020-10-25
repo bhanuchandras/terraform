@@ -1,5 +1,9 @@
 proxy:
   secretToken: "Secret Token"
+  service:
+    type: NodePort
+    nodePorts:
+      http: 30080
 auth:
   whitelist:
     users:
