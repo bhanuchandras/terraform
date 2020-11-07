@@ -10,7 +10,16 @@ auth:
       - "user1"
       - "user2"
       - "user3"
+hub:
+  db:
+    type: sqlite-memory
 singleuser:
   storage:
-    dynamic:
-      storageClass: local-storage
+    capacity: 2Gi
+    extraVolumes:
+      - name: shared-vol
+        persistentVolumeClaim:
+          claimName: shared-vol
+    extraVolumeMounts:
+      - name: shared-vol
+        mountPath: /home/shared
